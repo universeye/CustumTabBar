@@ -34,9 +34,19 @@ struct ContentView: View {
                         isSelected = index
                     }, label: {
                         Spacer()
-                        Image(systemName: sf[index])
-                            .font(.system(size: 25))
-                            .foregroundColor(.black)
+                        if index == 2 {
+                            Image(systemName: sf[index])
+                                .font(.system(size: 35))
+                                .foregroundColor(.red)
+                        } else if isSelected == index {
+                            Image(systemName: sf[index])
+                                .font(.system(size: 25))
+                                .foregroundColor(.black)
+                        } else {
+                            Image(systemName: sf[index])
+                                .font(.system(size: 25))
+                                .foregroundColor(.gray)
+                        }
                         Spacer()
                     })
                     

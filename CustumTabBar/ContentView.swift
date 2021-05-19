@@ -41,6 +41,8 @@ struct ContentView: View {
                 
                 Spacer()
                 Divider()
+                
+                //Tab Bar
                 HStack {
                     ForEach(0..<sf.count) { index in
                         Button(action: {
@@ -60,7 +62,7 @@ struct ContentView: View {
                             } else if isSelected == index {
                                 Image(systemName: sf[index])
                                     .font(.system(size: 25))
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.primary)
                             } else {
                                 Image(systemName: sf[index])
                                     .font(.system(size: 25))
